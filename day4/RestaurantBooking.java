@@ -1,5 +1,6 @@
 package day4;
 
+import java.util.Scanner;
 /**
 練習題：餐廳訂位系統
 你被任命為一家餐廳的軟件開發者，需要寫一個Java程序來幫助餐廳管理訂位情況。
@@ -47,24 +48,24 @@ public class RestaurantBooking {
 		if(numberOfPeople >= 4) {
 
 			if(budgetPerPerson >= 500) {
-
-
+				System.out.println("安排豪華包廂");
 			} else if(budgetPerPerson >= 300) {
-
-
+				System.out.println("安排普通包廂");
 			} else {
-
-
+				System.out.println("無法提供包廂，轉為考慮餐桌座位");
+				if(budgetPerPerson >= 200) {
+					System.out.println("推薦高級餐桌");
+				} else {
+					System.out.println("推薦普通餐桌");
+				}
 			}			
 
 		} else {
 
 			if(budgetPerPerson >= 300) {
-
-
+				System.out.println("推薦高級餐桌");
 			} else {
-
-
+				System.out.println("推薦普通餐桌");
 			}
 
 		}
