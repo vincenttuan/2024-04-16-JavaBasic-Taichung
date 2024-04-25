@@ -1,5 +1,7 @@
 package day4;
 
+import java.util.Scanner;
+
 /**
 練習題：電影院票價和座位選擇系統
 你負責開發一個電影院的票務系統，該系統需要根據顧客的年齡和觀影時間來決定票價和座位類型。
@@ -30,5 +32,37 @@ B.如果不是黃金時段：
 
 */
 public class TicketSystem {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
 
+        // 獲取顧客年齡
+        System.out.print("請輸入顧客年齡: ");
+        int age = sc.nextInt();
+        // 獲取觀影時間
+        System.out.print("請輸入觀影時間（24小時制，如15代表15:00）: ");
+        int hour = sc.nextInt();
+
+        // 根據時間和年齡決定票價和座位類型
+        if(hour >=18 && hour < 22) { // 黃金時段
+        	if(age <= 12) {
+        		System.out.println("兒童票：8元，普通座");
+        	} else if(age >= 13 && age <= 64) {
+        		System.out.println("成人票：12元，優選座");
+        	} else { // age >= 65
+        		System.out.println("長者票：10元，優選座");
+        	}
+
+        } else { // 非黃金時段
+        	if(age <= 12) {
+        		System.out.println("兒童票：5元，普通座");
+        	} else if(age >= 13 && age <= 64) {
+        		System.out.println("成人票：10元，普通座");
+        	} else { // age >= 65
+        		System.out.println("長者票：8元，普通座");
+        	}
+        }
+
+        // 關閉
+        sc.close();
+	}
 }
