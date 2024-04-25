@@ -26,6 +26,7 @@ public class SeasonalActivities { // 季節性活動
 
 		int seasonId = sc.nextInt(); // 季節ID
 
+		// 使用 if-else
 		if(seasonId == 1) {
 			System.out.println("春季：推薦去賞櫻。");
 		} else if(seasonId == 2) {
@@ -36,6 +37,25 @@ public class SeasonalActivities { // 季節性活動
 			System.out.println("冬季：推薦去滑雪。");
 		} else {
 			System.out.println("季節輸入錯誤, 請重新輸入");
+		}
+
+		// 使用 switch-case (快速)
+		switch(seasonId) {
+			case 1:
+				System.out.println("春季：推薦去賞櫻。");
+				break;
+			case 2:
+				System.out.println("夏季：推薦去海邊游泳。");
+				break;
+			case 3:
+				System.out.println("秋季：推薦去登山賞楓葉。");
+				break;
+			case 4:
+				System.out.println("冬季：推薦去滑雪。");
+				break;
+			default:
+				System.out.println("季節輸入錯誤, 請重新輸入");
+				//break;				
 		}
 
 		sc.close();
