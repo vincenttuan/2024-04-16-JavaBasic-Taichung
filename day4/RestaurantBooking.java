@@ -37,12 +37,24 @@ public class RestaurantBooking {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		// 獲取顧客人數
-		System.out.print("請輸入顧客人數:");
+		System.out.print("請輸入顧客人數(1~10):");
 		int numberOfPeople = sc.nextInt();
 
+		// 判斷顧客人數是否介於(1~10)
+		if(numberOfPeople < 1 || numberOfPeople > 10) {
+			System.out.println("顧客人數需在1~10之間");
+			return;
+		}
+
 		// 獲取每人預算
-		System.out.print("請輸入每人預算:");
+		System.out.print("請輸入每人預算(100~1000):");
 		int budgetPerPerson = sc.nextInt();
+
+		// 判斷每人預算是否介於(100~1000)
+		if(!(budgetPerPerson >= 100 && budgetPerPerson <= 1000)) {
+			System.out.println("每人預算需在100~1000之間");
+			return;
+		}
 
 		// 根據人數和預算做出訂位決策
 		if(numberOfPeople >= 4) {
