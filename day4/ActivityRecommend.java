@@ -21,17 +21,18 @@ public class ActivityRecommend {
 
 		switch(weatherId) {
 			case 1:
-				System.out.print("外出打球");
+				System.out.println("外出打球");
 				break;
 			case 2:
 			case 3:
-				System.out.print("外出散步");
+				System.out.println("外出散步");
 				break;
 			case 4:
-				System.out.print("在家寫程式");
+				System.out.println("在家寫程式");
 				break;
 			default:
-				System.out.print("看書");
+				System.out.println("看書");
+			
 		}
 
 
