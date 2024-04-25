@@ -16,13 +16,13 @@ package day4;
 A.如果顧客人數超過4人：
 	若每人預算不少於500元，輸出："安排豪華包廂"
 	若每人預算不少於300元，輸出："安排普通包廂"
-	否則，顯示："無法提供包廂，轉為考慮普通座位"，然後根據預算：
+	否則，顯示："無法提供包廂，轉為考慮餐桌座位"，然後根據預算：
 		若預算不少於200元，輸出："推薦高級餐桌"
 		否則，輸出："推薦普通餐桌"
 
 B.如果顧客人數不超過4人：
-若每人預算不少於300元，輸出："推薦高級餐桌"
-否則，輸出："推薦普通餐桌"
+	若每人預算不少於300元，輸出："推薦高級餐桌"
+	否則，輸出："推薦普通餐桌"
 
 提示
 	使用 System.out.print() 和 System.out.println() 來輸出提示和結果。
@@ -34,7 +34,41 @@ B.如果顧客人數不超過4人：
 public class RestaurantBooking {
 
 	public static void main(String[] args) {
-		
+		Scanner sc = new Scanner(System.in);
+		// 獲取顧客人數
+		System.out.print("請輸入顧客人數:");
+		int numberOfPeople = sc.nextInt();
+
+		// 獲取每人預算
+		System.out.print("請輸入每人預算:");
+		int budgetPerPerson = sc.nextInt();
+
+		// 根據人數和預算做出訂位決策
+		if(numberOfPeople >= 4) {
+
+			if(budgetPerPerson >= 500) {
+
+
+			} else if(budgetPerPerson >= 300) {
+
+
+			} else {
+
+
+			}			
+
+		} else {
+
+			if(budgetPerPerson >= 300) {
+
+
+			} else {
+
+
+			}
+
+		}
+
 	}
 
 }
