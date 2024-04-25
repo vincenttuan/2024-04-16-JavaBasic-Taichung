@@ -17,16 +17,18 @@ public class GradeSystem {
 		int score = sc.nextInt();
 
 		System.out.printf("成績: %d%n", score);
-		if(score >= 90) {
+		if(score >= 90 && score <= 100) {
 			System.out.println("等級 A: 優秀");
-		} else if(score >= 80) {
+		} else if(score >= 80 && score < 90) {
 			System.out.println("等級 B: 良好");
-		} else if(score >= 70) {
+		} else if(score >= 70 && score < 80) {
 			System.out.println("等級 C: 中等");
-		} else if(score >= 60) {
+		} else if(score >= 60 && score < 70) {
 			System.out.println("等級 D: 及格");
-		} else {
+		} else if (score >= 0 && score < 60){
 			System.out.println("等級 F: 不及格");
+		} else {
+			System.out.println("分數範圍(0~100)錯誤!");
 		}
 	}
 
