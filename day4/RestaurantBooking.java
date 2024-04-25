@@ -70,6 +70,9 @@ public class RestaurantBooking {
 
 		}
 
+		// 關閉
+		sc.close();
+
 	}
 
 }
