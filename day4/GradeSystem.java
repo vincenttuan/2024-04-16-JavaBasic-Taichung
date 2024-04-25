@@ -1,5 +1,6 @@
 package day4;
 
+import java.util.Scanner;
 // 學生分數評等系統
 // 90~100 A
 // 80~89  B
@@ -9,7 +10,11 @@ package day4;
 public class GradeSystem {
 
 	public static void main(String[] args) {
-		int score = 82;
+		// 改成使用者可以自行輸入分數
+		// 提示:使用 Scanner
+		Scanner sc = new Scanner(System.in);
+		System.out.print("請輸入分數: ");
+		int score = sc.nextInt();
 
 		System.out.printf("成績: %d%n", score);
 		if(score >= 90) {
