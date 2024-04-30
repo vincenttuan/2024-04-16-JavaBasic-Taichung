@@ -13,16 +13,22 @@ public class ForLoop4 {
 
 	public static void main(String[] args) {
 		
+		int total = 0;
+		
 		for(int x=1;x<=9;x++) {
 
 			//----------------------------------------------
 			for(int y=1;y<=9;y++) {
-				System.out.printf("%d*%d=%d ", x, y, (x*y));
+				int sum = x*y; // 乘積
+				System.out.printf("%d*%d=%2d ", x, y, sum);
+				total += sum; // 累加 total = total + sum
 			}
 			System.out.println(); // 換行
 			//----------------------------------------------
 
 		}
+
+		System.out.printf("總和: %,d%n", total);
 
 	}
 
