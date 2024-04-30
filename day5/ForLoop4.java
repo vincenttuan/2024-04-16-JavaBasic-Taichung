@@ -20,7 +20,9 @@ public class ForLoop4 {
 			//----------------------------------------------
 			for(int y=1;y<=9;y++) {
 				int sum = x*y; // 乘積
-				System.out.printf("%d*%d=%2d ", x, y, sum);
+				//System.out.printf("%d*%d=%2d ", x, y, sum);
+				//System.out.printf("%d*%d=%-2d ", x, y, sum);
+				System.out.printf("%d*%d=%02d ", x, y, sum);
 				total += sum; // 累加 total = total + sum
 			}
 			System.out.println(); // 換行
