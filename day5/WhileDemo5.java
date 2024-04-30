@@ -17,6 +17,12 @@ public class WhileDemo5 {
 			Scanner scanner = new Scanner(System.in);
 			System.out.printf("請在 %d~%d 之間猜一個數字:", min, max);
 			int guess = scanner.nextInt();
+			// 1. 檢查 guess 是否在合法範圍
+			if(guess <= min || guess >= max) {
+				System.out.println("數字範圍不正確");
+				continue;
+			}
+
 			if(guess < ans) {
 				min = guess;
 				continue;
